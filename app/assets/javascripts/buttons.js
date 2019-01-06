@@ -5,27 +5,47 @@ $(document).ready(function() {
   var blueButton = $("#blue-button");
 
   orangeButton.on("click", function() {
-    redButton.toggleClass("orange-button red-button");
-    blueButton.toggleClass("orange-button blue-button");
-    greenButton.toggleClass("orange-button green-button");
+    orangeButton.addClass("orange-button");
+    redButton.toggleClass("orange-button");
+    blueButton.toggleClass("orange-button");
+    greenButton.toggleClass("orange-button");
+    redButton.removeClass("green-button blue-button red-button");
+    blueButton.removeClass("green-button blue-button red-button");
+    greenButton.removeClass("green-button blue-button red-button");
+    orangeButton.removeClass("green-button blue-button red-button");
   });
 
   redButton.on("click", function() {
-    orangeButton.toggleClass("red-button orange-button");
-    blueButton.toggleClass("red-button blue-button");
-    greenButton.toggleClass("red-button green-button");
+    redButton.addClass("red-button");
+    orangeButton.toggleClass("red-button");
+    blueButton.toggleClass("red-button");
+    greenButton.toggleClass("red-button");
+    redButton.removeClass("green-button blue-button orange-button");
+    blueButton.removeClass("green-button blue-button orange-button");
+    greenButton.removeClass("green-button blue-button orange-button");
+    orangeButton.removeClass("green-button blue-button orange-button");
   });
 
   blueButton.on("click", function() {
-    orangeButton.toggleClass("blue-button orange-button");
-    redButton.toggleClass("blue-button red-button");
-    greenButton.toggleClass("blue-button green-button");
+    blueButton.addClass("blue-button");
+    redButton.toggleClass("blue-button");
+    orangeButton.toggleClass("blue-button");
+    greenButton.toggleClass("blue-button");
+    redButton.removeClass("green-button orange-button red-button");
+    blueButton.removeClass("green-button orange-button red-button");
+    greenButton.removeClass("green-button orange-button red-button");
+    orangeButton.removeClass("green-button orange-button red-button");
   });
 
   greenButton.on("click", function() {
-    orangeButton.toggleClass("green-button orange-button");
-    redButton.toggleClass("green-button red-button");
-    blueButton.toggleClass("green-button blue-button");
+    greenButton.addClass("green-button");
+    redButton.toggleClass("green-button");
+    blueButton.toggleClass("green-button");
+    orangeButton.toggleClass("green-button");
+    redButton.removeClass("orange-button blue-button red-button");
+    blueButton.removeClass("orange-button blue-button red-button");
+    greenButton.removeClass("orange-button blue-button red-button");
+    orangeButton.removeClass("orange-button blue-button red-button");
   });
 
 });
